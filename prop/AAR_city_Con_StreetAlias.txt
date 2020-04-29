@@ -1,0 +1,92 @@
+# This is header Key~TrafficCastSeparateSign~Value
+#Special cases
+\.(.*)~TrafficCastSeparateSign~$1
+APPROXIMATELY \d+,\d+ FEET (?:SOUTH|WEST|NORTH|EAST) OF~TrafficCastSeparateSign~ 
+#(?:BEGINNING|BEGIN) ON \w+DAY, \w+ \d+,?~TrafficCastSeparateSign~ 
+#\b(?:JANUARY|FEBRUARY|MARCH|APRIL|MAY|JUNE|JULY|AUGUST|SEPTEMBER|OCTOBER|NOVEMBER|DECEMBER) \d{1,2},~TrafficCastSeparateSign~ 
+\*UPDATED? \b(?:JAN|FEB|MAR|APR|MAY|JUN|JULY|AUG|SEP|OCT|NOV|DEC)\. \d{1,2}~TrafficCastSeparateSign~ 
+\b\d+\.~TrafficCastSeparateSign~ 
+:\s*(.*)~TrafficCastSeparateSign~$1
+WILL BE CLOSED?.*~TrafficCastSeparateSign~ 
+
+THE(?:\sWESTBOUND|\sEASTBOUND|\sNORTHBOUND|\sSOUTHBOUND)? (?:RIGHT|LEFT|EAST|WEST|NORTH|SOUTH) (?:LANE|SIDE) OF (.*)~TrafficCastSeparateSign~$1
+WITH THE REPAIR OF\b.*~TrafficCastSeparateSign~ 
+.*LANES? OF (.*)~TrafficCastSeparateSign~$1
+.* ON (.*)~TrafficCastSeparateSign~$1
+(.*?) (WILL|FOR) .*~TrafficCastSeparateSign~$1
+.*PROJECT LIMITS: (.*)~TrafficCastSeparateSign~$1
+(.*) TRAFFIC~TrafficCastSeparateSign~$1
+(NORTH|SOUTH|WEST|EAST)BOUND (.*)~TrafficCastSeparateSign~$2
+(NB|SB|WB|EB) (.*)~TrafficCastSeparateSign~$2
+(AT|OVER) (.*)~TrafficCastSeparateSign~$2
+(.*) INTERSECTIONS?~TrafficCastSeparateSign~$1
+(.*) AND .*~TrafficCastSeparateSign~$1
+(.*) TO .*~TrafficCastSeparateSign~$1
+(.*)/.*~TrafficCastSeparateSign~$1
+(.*)\.$~TrafficCastSeparateSign~$1
+</?[a-zA-Z]+[^><]*>~TrafficCastSeparateSign~ 
+RESURFACING~TrafficCastSeparateSign~ 
+\d+(?::\d+)? [A|P]\.?M\.?~TrafficCastSeparateSign~ 
+
+#Street type to TC standard type
+(\s+\bSTREET\b.*)~TrafficCastSeparateSign~ ST
+(\bSTREETS\b)~TrafficCastSeparateSign~ST
+(\bSTREET\b)~TrafficCastSeparateSign~ST
+(\bAVENUES\b.*)~TrafficCastSeparateSign~AVE
+(\bAVENUE\b.*)~TrafficCastSeparateSign~AVE
+(\bAVEENUE\b.*)~TrafficCastSeparateSign~AVE
+(\bAV\b.*)~TrafficCastSeparateSign~AVE
+(\bROAD\b.*)~TrafficCastSeparateSign~RD
+(\bBOULEVARD\b.*)~TrafficCastSeparateSign~BLVD
+(\bDRIVE\b.*)~TrafficCastSeparateSign~DR
+(\bPARKWAY\b.*)~TrafficCastSeparateSign~PKWY
+(\bPKWY\b.*)~TrafficCastSeparateSign~PKWY
+(\bEXPRESSWAY\b.*)~TrafficCastSeparateSign~EXPY
+(\bEXPRESS\b.*)~TrafficCastSeparateSign~EXPY
+(\bTUNNEL\b.*)~TrafficCastSeparateSign~TUNL
+(\bBRIDGES\b.*)~TrafficCastSeparateSign~BRG
+(\bBRIDGE\b.*)~TrafficCastSeparateSign~BRG
+(\bHIGHWAY\b.*)~TrafficCastSeparateSign~HWY
+(\bCIRCLE\b.*)~TrafficCastSeparateSign~CIR
+(\bPLACE\b.*)~TrafficCastSeparateSign~PL
+(\bVIADUCT\b.*)~TrafficCastSeparateSign~VIAD
+(\bLANE\b.*)~TrafficCastSeparateSign~LN
+(\bCREEK\b.*)~TrafficCastSeparateSign~CRK
+(\bTURNPIKE\b.*)~TrafficCastSeparateSign~TPKE
+(\bPAKRWAY\b.*)~TrafficCastSeparateSign~PKWY
+\bROUTE\b.*~TrafficCastSeparateSign~RD
+(\bINTERCHANGE\b)~TrafficCastSeparateSign~ 
+(\bLOCAL\b\s*LANES)~TrafficCastSeparateSign~ 
+\bCAUSEWAY\b~TrafficCastSeparateSign~CSWY
+\bCOURT\b~TrafficCastSeparateSign~CT
+(\s\s+)~TrafficCastSeparateSign~ 
+(\bTRAIL\b)~TrafficCastSeparateSign~TRL
+#Special case
+(.*) LK$~TrafficCastSeparateSign~$1 LAKE
+(.*) CRK$~TrafficCastSeparateSign~$1 CREEK
+ST. CLAIR~TrafficCastSeparateSign~SAINT CLAIR
+(.*)\(.*~TrafficCastSeparateSign~$1
+(.*),.*~TrafficCastSeparateSign~$1
+NORTH TERRITORIAL RD~TrafficCastSeparateSign~N TERRITORIAL RD
+^NORTH (.*)~TrafficCastSeparateSign~N $1
+^SOUTH (.*)~TrafficCastSeparateSign~S $1
+^EAST (.*)~TrafficCastSeparateSign~E $1
+^WEST (.*)~TrafficCastSeparateSign~W $1
+THE (.*)~TrafficCastSeparateSign~$1
+DEXTER‐TOWNHALL RD~TrafficCastSeparateSign~DEXTER TOWNHALL RD
+.* OF (.*)~TrafficCastSeparateSign~$1
+SEVEN MILE RD~TrafficCastSeparateSign~7 MILE RD
+SALINE-MILAN RD~TrafficCastSeparateSign~SALINE MILAN RD
+DEXTER-PINCKNEY RD~TrafficCastSeparateSign~DEXTER PINCKNEY RD
+ISLAND LK RD~TrafficCastSeparateSign~ISLAND LAKE RD
+FOURTH\b(.*)~TrafficCastSeparateSign~4TH$1
+FIFTH\b(.*)~TrafficCastSeparateSign~5TH$1
+SEVENTH\b(.*)~TrafficCastSeparateSign~7TH$1
+FIRST\b(.*)~TrafficCastSeparateSign~1ST$1
+THIRD\b(.*)~TrafficCastSeparateSign~3RD$1
+
+ANN ARBOR-SALINE RD~TrafficCastSeparateSign~ANN ARBOR SALINE RD
+5TH$~TrafficCastSeparateSign~5TH ST
+#(HILL|GREENE|BROWN|LIBERTY|ADAMS|WILLIAM|DIVISION|BENJAMIN|MARY|PACKARD)$~TrafficCastSeparateSign~$1 ST
+#(KEECH|DAVIS|HOOVER|WASHTENAW)$~TrafficCastSeparateSign~$1 AVE
+#(ELLSWORTH)~TrafficCastSeparateSign~$1 RD

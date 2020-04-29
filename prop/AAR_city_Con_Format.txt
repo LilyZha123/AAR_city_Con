@@ -1,0 +1,33 @@
+#LOCATION_FORMAT
+LOCATION_FORMAT(?i)</?a.*?>~TrafficCastSeparateSign~ 
+LOCATION_FORMAT.*(?:BEGINNING|BEGIN)(?:\sAT \d+(?::\d+)? (?:A|P)\.?M\.?)? ON \w+DAY,? \w+\.? \d+,?~TrafficCastSeparateSign~ 
+LOCATION_FORMAT\b(?:JANUARY|FEBRUARY|MARCH|APRIL|MAY|JUNE|JULY|AUGUST|SEPTEMBER|OCTOBER|NOVEMBER|DECEMBER) \d{1,2},~TrafficCastSeparateSign~ 
+LOCATION_FORMAT\bPLEASE VISIT\b.*~TrafficCastSeparateSign~ 
+##LOCATION_FORMATWILL BE (?:REDUCED|CLOSED).*~TrafficCastSeparateSign~ 
+LOCATION_FORMATWITH THE REPAIR OF\b.*~TrafficCastSeparateSign~ 
+LOCATION_FORMATTHE(?:\sEXISTING)? (?:RIGHT|LEFT),? (?:EAST|WEST|NORTH|SOUTH)BOUND~TrafficCastSeparateSign~ 
+LOCATION_FORMAT\bSO THAT\b.*~TrafficCastSeparateSign~ 
+LOCATION_FORMAT\bDUE TO\b.*~TrafficCastSeparateSign~ 
+LOCATION_FORMAT(?:FROM|BETWEEN) \d+(?::\d+)? [A|P]\.?M\.? (?:TO|AND) \d+(?::\d+)? [A|P]\.?M\.?~TrafficCastSeparateSign~ 
+
+LOCATION_FORMAT\*UPDATED? \b(?:JAN|FEB|MAR|APR|MAY|JUN|JULY|AUG|SEP|OCT|NOV|DEC)\. \d{1,2}~TrafficCastSeparateSign~ 
+LOCATION_FORMAT(?i)(?<=)THE (?:MORNING|NIGHT) OF\b~TrafficCastSeparateSign~ 
+LOCATION_FORMAT\b([WESN])\.(?= )~TrafficCastSeparateSign~$1
+LOCATION_FORMAT(?i)\b(AVE|ST|DR)\.(?= will)~TrafficCastSeparateSign~$1
+LOCATION_FORMAT\s\s+~TrafficCastSeparateSign~ 
+LOCATION_FORMAT(?i)^ON AUGUST 7TH,~TrafficCastSeparateSign~ 
+LOCATION_FORMAT(?i)(,|\.)\s*(?:\w+ ){1,9}IS STILL BEING DETOURED ALONG.*?\.~TrafficCastSeparateSign~$1
+LOCATION_FORMAT(?i)\bATTACHED, PLEASE FIND A COPY OF THE DETOUR MAP THAT IS CURRENTLY IN PLACE~TrafficCastSeparateSign~ 
+LOCATION_FORMAT(?i)THE SIDEWALKS .*? (ARE|IS) NOW OPEN TO TRAFFIC.*?\.~TrafficCastSeparateSign~ 
+LOCATION_FORMAT(?i)CURRENTLY,~TrafficCastSeparateSign~ 
+LOCATION_FORMAT(?i)THE ROADWAY HAS TEMPORARY STRIPING AND THE CENTER TURN LANE IS CLOSED.*?\.~TrafficCastSeparateSign~ 
+LOCATION_FORMAT(?i)THE PERMANENT STRIPING WILL TAKE PLACE.*?\.~TrafficCastSeparateSign~ 
+LOCATION_FORMAT(?i)THESE CLOSURES ARE TO ACCOMMODATE STORM SEWER, SIDEWALK AND CURB WORK.~TrafficCastSeparateSign~ 
+LOCATION_FORMAT(?i)Signage will be in place to alert and direct pedestrians~TrafficCastSeparateSign~ 
+LOCATION_FORMAT(?i)A project underway at .*? will require work .*?\.~TrafficCastSeparateSign~ 
+LOCATION_FORMAT\.(\s*\.){1,}~TrafficCastSeparateSign~.
+LOCATION_FORMAT,(\s*,){1,}~TrafficCastSeparateSign~,
+LOCATION_FORMAT,(\s*\.)~TrafficCastSeparateSign~.
+LOCATION_FORMAT\s\s+~TrafficCastSeparateSign~ 
+LOCATION_FORMAT\s+\.~TrafficCastSeparateSign~.
+LOCATION_FORMAT\s+,~TrafficCastSeparateSign~,

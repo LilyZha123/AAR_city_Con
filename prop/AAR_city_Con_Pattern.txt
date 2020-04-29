@@ -1,0 +1,51 @@
+# This is header, each field can have serveral patters, like FROM_PATTERN1,FROM_PATTERN2
+
+
+# MainSt Pattern       
+MAIN_ST_PATTERN~TrafficCastSeparateSign~.*(?:ON|BEGINNING)(?:.*)? \w+DAY THROUGH \w+DAY, \w+\.? \d+, \d{4}, (.*) WILL BE CLOSED.*
+MAIN_ST_PATTERN~TrafficCastSeparateSign~.*TEMPORARY CLOSURES OF (.*) BETWEEN .* AND .*: (?:(WEST|EAST|SOUTH|NORTH)BOUND .* WILL .*)
+MAIN_ST_PATTERN~TrafficCastSeparateSign~.*((?:NORTH|SOUTH|WEST|EAST)BOUND TRAFFIC ON .*) FROM .* TO .*(?:NORTH|SOUTH|WEST|EAST)BOUND TRAFFIC .* FROM .* TO .*
+MAIN_ST_PATTERN~TrafficCastSeparateSign~(.*) BETWEEN .* AND .*;.* BETWEEN .* AND .*
+MAIN_ST_PATTERN~TrafficCastSeparateSign~(.*), .*, BETWEEN .* AND .*
+MAIN_ST_PATTERN~TrafficCastSeparateSign~(?:AND\s)(.*),? BETWEEN .* AND .*
+MAIN_ST_PATTERN~TrafficCastSeparateSign~(.*),? BETWEEN .* AND .*
+MAIN_ST_PATTERN~TrafficCastSeparateSign~(?:AND\s)(.*), FROM\b.*\bTO\b.* 
+MAIN_ST_PATTERN~TrafficCastSeparateSign~(?:AND\s)(.*) FROM\b.*\bTO\b.* 
+MAIN_ST_PATTERN~TrafficCastSeparateSign~(.*), FROM\b.*\bTO\b.*
+MAIN_ST_PATTERN~TrafficCastSeparateSign~(.*) FROM\b.*\b(?:TO|AND)\b.*
+MAIN_ST_PATTERN~TrafficCastSeparateSign~(.*),? BEFORE AND AFTER .*,? WILL BE CLOSED.*
+MAIN_ST_PATTERN~TrafficCastSeparateSign~.* ON (.*) \(ONTO.*\).*
+MAIN_ST_PATTERN~TrafficCastSeparateSign~INTERSECTION OF (.*) AND .*
+MAIN_ST_PATTERN~TrafficCastSeparateSign~(.*) (?:AT|NEAR) .*
+
+# CrossFrom Pattern
+FROM_PATTERN~TrafficCastSeparateSign~.*(?:ON|BEGINNING)(?:.*)? \w+DAY THROUGH \w+DAY, \w+\.? \d+, \d{4}, (.*) WILL BE CLOSED.*
+FROM_PATTERN~TrafficCastSeparateSign~.*TEMPORARY CLOSURES OF .* BETWEEN (.*) AND .*: (?:(WEST|EAST|SOUTH|NORTH)BOUND .* WILL .*)
+FROM_PATTERN~TrafficCastSeparateSign~.*(?:NORTH|SOUTH|WEST|EAST)BOUND TRAFFIC ON .* FROM (.*) TO .*(?:NORTH|SOUTH|WEST|EAST)BOUND TRAFFIC .* FROM .* TO .*
+FROM_PATTERN~TrafficCastSeparateSign~.* BETWEEN (.*) AND .*;.* BETWEEN .* AND .*
+FROM_PATTERN~TrafficCastSeparateSign~.*, .*, BETWEEN (.*) AND .*
+FROM_PATTERN~TrafficCastSeparateSign~(?:AND\s).*,? BETWEEN (.*) AND .*
+FROM_PATTERN~TrafficCastSeparateSign~.*,? BETWEEN (.*) AND .*
+FROM_PATTERN~TrafficCastSeparateSign~.*\(FROM\b(.*)\bTO\b.*\).*
+FROM_PATTERN~TrafficCastSeparateSign~(?:AND\s).*,? FROM\b(.*)\bTO\b.*
+FROM_PATTERN~TrafficCastSeparateSign~.*,? FROM\b(.*)\b(?:TO|AND)\b.*
+FROM_PATTERN~TrafficCastSeparateSign~.*,? BEFORE AND AFTER\b (.*),? WILL BE CLOSED.*
+FROM_PATTERN~TrafficCastSeparateSign~INTERSECTION OF .* AND (.*)
+FROM_PATTERN~TrafficCastSeparateSign~.* (?:AT|NEAR) (.*)
+FROM_PATTERN~TrafficCastSeparateSign~.* ON .* \(ONTO(.*)\).*
+
+# CrossTo Pattern
+TO_PATTERN~TrafficCastSeparateSign~.*(?:ON|BEGINNING)(?:.*)? \w+DAY THROUGH \w+DAY, \w+\.? \d+, \d{4}, (.*) WILL BE CLOSED.*
+TO_PATTERN~TrafficCastSeparateSign~.*TEMPORARY CLOSURES OF .* BETWEEN .* AND (.*): (?:(WEST|EAST|SOUTH|NORTH)BOUND .* WILL .*)
+TO_PATTERN~TrafficCastSeparateSign~.*(?:NORTH|SOUTH|WEST|EAST)BOUND TRAFFIC ON .* FROM .* TO (.*)(?:NORTH|SOUTH|WEST|EAST)BOUND TRAFFIC .* FROM .* TO .*
+TO_PATTERN~TrafficCastSeparateSign~.* BETWEEN .* AND (.*);.* BETWEEN .* AND .*
+TO_PATTERN~TrafficCastSeparateSign~.*, .*, BETWEEN .* AND (.*)
+TO_PATTERN~TrafficCastSeparateSign~(?:AND\s).*,? \bBETWEEN\b .* AND (.*)
+TO_PATTERN~TrafficCastSeparateSign~.*,? BETWEEN .* AND (.*)
+TO_PATTERN~TrafficCastSeparateSign~.*\(FROM\b.*\bTO\b(.*)\).*
+TO_PATTERN~TrafficCastSeparateSign~(?:AND\s).*,? FROM\b.*\bTO\b(.*)
+TO_PATTERN~TrafficCastSeparateSign~.*,? FROM\b.*\bTO\b(.*) WILL BE CLOSED.*
+TO_PATTERN~TrafficCastSeparateSign~.*,? FROM\b.*\b(?:TO|AND)\b(.*)
+
+
+
