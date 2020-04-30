@@ -291,7 +291,7 @@ public class AAR_city_Con {
 				if (sleepTime < 0) {
 					sleepTime = 1000;
 				}
-                LOGGER.info("Last built on 11/11/2019; Ticket number:  #SD-1229");
+                LOGGER.info("Last built on 11/11/2020; Ticket number:  #SD-1229");
 				LOGGER.info("Sleeping for " + (sleepTime / 1000) + " seconds.");
 
 				System.out.println();
